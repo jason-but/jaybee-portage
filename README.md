@@ -1,26 +1,23 @@
 # jaybee-portage
 
-## Instructions to push to GIT
+This repository stores my local Gentoo ebuild repository for applications to install that are not included in the normal
+Gentoo portage tree
 
-Some basic instructions to myself for pushing updates
+Typically used to manage installation of my own programs/libraries, and any dependencies that are not available in Gentoo
 
-### Editing existing files
+## Using the portage tree
+
+> [!NOTE]
+> You need to first install both the git application `dev-vcs/git` and `app-eselect/eselect-repository`
+
+Install the repository:
 
 ```bash
-git commit -m "new comment"
-git push -u origin main
+eselect repository add jaybee-portage git https://github.com/jason-but/jaybee-portage
 ```
 
-### Adding new files/folders
+Sync the repository
 
 ```bash
-git add <filename>
-git add <folder>
-git commit -m "new commit"
-git push -u origin main
+eix-sync
 ```
-
-### Deleting files from repository
-
-Pending until I need to do it
-
